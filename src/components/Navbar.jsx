@@ -26,8 +26,14 @@ export const Navbar = () => {
 
     <div className="w-screen z-50 ">
         <div className="w-full z-50 flex justify-center ">
-            
-        {!isMobile ? ( <ul className="flex z-50 w-3/5 h-[6rem] mt-[0.3rem] bg-[#00000088] rounded-md items-center justify-center skewed ">
+        
+        {!isMobile ? ( 
+          <>
+        <div className=" absolute top-0 right-0 p-[1rem] z-50 ">
+        <Link className="bg-white " to="/panel"><button className="rounded-md bg-white p-[0.5rem]">PANEL ADMIN</button></Link>
+     </div>
+        <ul className="flex z-50 w-3/5 h-[6rem] mt-[0.3rem] bg-[#00000088] rounded-md items-center justify-center skewed ">
+        
             <div className="flex w-3/4 gap-[2.5rem] justify-center">
             <Link to="/"><li className=" text-white hover:cursor-pointer  hover:text-[#72FFFB] hover:underline hover:underline-offset-4 " id="inicio">INICIO</li></Link>
             <Link to="/tienda"><li className="text-white hover:cursor-pointer  hover:text-[#FF1F97] hover:underline hover:underline-offset-4">TIENDA</li></Link>
@@ -45,7 +51,8 @@ export const Navbar = () => {
             </li></Link>
             </div>
            
-         </ul> ) : (
+         </ul>
+         </> ) : (
           <div className='flex z-50  w-full justify-center items-center'>
             <MobileNavBar />
           </div>

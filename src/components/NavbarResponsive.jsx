@@ -6,7 +6,8 @@ import {
   HomeIcon,
   ChatBubbleOvalLeftEllipsisIcon,
   BuildingStorefrontIcon,
-  FireIcon
+  FireIcon,
+  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
 
@@ -15,6 +16,7 @@ const products = [
   {  description: 'Tienda', href: '/tienda', icon: BuildingStorefrontIcon, id:"contacto" },
   {  description: 'Contacto', href: '/contacto', icon: ChatBubbleOvalLeftEllipsisIcon  },
   {  description: 'Promos', href: '/promos', icon:FireIcon   },
+  {  description: 'Panel', href: '/panel', icon:ArrowRightIcon  },
 ];
 
 /* eslint-disable-next-line react/prop-types */

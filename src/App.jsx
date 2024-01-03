@@ -25,8 +25,8 @@ function App() {
       <Route path="/tienda"  element={<Tienda/>} />
       <Route path="/promos"  element={<PromosVEspaña/>} />
       <Route path="/contacto"  element={<Contacto/>} />
-      <Route path="/playmakerAdminPanel/global"  element={<Panel/>} />
-      <Route path="/playmakerAdminPanel"  element={<PanelEspaña/>} />
+      <Route path="/panel"  element={<Panel/>} />
+      <Route path="/panelEspaña"  element={<PanelEspaña/>} />
       
       
      </Routes>

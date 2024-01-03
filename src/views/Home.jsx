@@ -62,7 +62,8 @@ export const Home = () => {
         ) : (
           <>
             {isInEspaña && isOver18 ? (
-              <>
+              <>  
+                
                  <div className="flex h-[23rem] z-0 max-[470px]:h-[29rem]">
                 <video
                     autoPlay
@@ -85,6 +86,7 @@ export const Home = () => {
               </>
             ) : (
               <>
+                 
                 <div className="flex h-[23rem] z-0 max-[470px]:h-[29rem] justify-center items-center">
                 <video
                     autoPlay

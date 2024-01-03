@@ -37,7 +37,7 @@ export const PanelEspaña = () => {
   return (
     <div className="text-white h-full w-full flex flex-col">
            <div className='w-11/12 mt-[2rem] justify-end flex'>
-        <Link to="/playmakerAdminPanel/global"><button className='back text-center text-xs back rounded-full hover:cursor-pointer hover:scale-125 transition-all ease-in-out duration-200 p-[1rem] hover:bg-fuchsia-600'>
+        <Link to="/panel"><button className='back text-center text-xs back rounded-full hover:cursor-pointer hover:scale-125 transition-all ease-in-out duration-200 p-[1rem] hover:bg-fuchsia-600'>
             Ir al Panel Internacional
           </button></Link>
       </div>
