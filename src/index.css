@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  overflow-y: scroll;
+}
+body{
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  
+/* font-family: 'Roboto', sans-serif; */
+font-family: 'Source Code Pro', monospace;
+}
+.custom-modal-content {
+  min-height: 100px;
+}
+
+.custom-infoparrafo {
+  word-wrap: break-word;
+}
+
+.backTwitch{
+  background: #41295a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+  
+}
+.square {
+  
+  overflow: hidden;
+ 
+}
+.skewed {
+  
+  
+  transform: skewX(-5deg);
+  /* Ajusta el margen superior para compensar la inclinación */
+}
+
+.back{
+  background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #f80759, #b93092);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #f80759, #b93092); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+.backHover{
+  background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #b93092, #f80759);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #b93092, #f80759); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+
+.backHover2:hover{
+  background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #b93092, #f80759);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #b93092, #f80759); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+@keyframes agrandar-achicar {
+  0% {
+    transform: scale(0.8); /* Tamaño normal */
+  }
+  100% {
+    transform: scale(1.1); /* Agrandar al 150% */
+  }
+}
+
+
+.elemento{
+  animation: agrandar-achicar 0.7s infinite alternate;
+}
+
+
+.backiconos{
+  background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #f8075744, #df31ad);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #f8075746, #df31ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+.colorline{
+ color: #FF1F97;
+}
+.backHome{
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.backHome2{
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #434343, #181717);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #434343, #181717); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.modal-animation {
+  opacity: 0.5;
+  transform: translateY(-50px); /* Empieza desde arriba */
+  animation: modalFadeIn 0.5s forwards;
+}
+
+/* Define la animación */
+@keyframes modalFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
