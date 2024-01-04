@@ -23,7 +23,7 @@ export const Home = () => {
       try {
         const response = await axios.get('https://get.geojs.io/v1/ip/country.json');
         const countryCode = response.data.country;
-         console.log(countryCode);
+         
         if (countryCode === 'ES') {
           Cookies.set('isInSpain', 'true', { expires: 30 });
           setIsInEspaña(true);
