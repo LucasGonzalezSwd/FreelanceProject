@@ -14,7 +14,7 @@ export const Age = ({ handleAgeSelection }) => {
   };
 
   return (
-    <div className="w-screen absolute top-0 z-30 min-h-screen bg-black text-white">
+    <div className="w-screen absolute top-0 z-50 min-h-screen bg-black text-white">
       <div className="flex flex-col items-center justify-center w-full mt-[4rem]">
         <img src="https://storage.googleapis.com/casino-playmaker/PLAYERMAKERTV-COLOR-5-1.png" alt="" className="h-[25rem] w-[25rem] max-[500px]:h-[20rem] max-[500px]:w-[20rem] max-[380px]:h-[18rem] max-[380px]:w-[18rem]" />
         <p className="text-white text-lg -mt-[2rem] mb-[1rem]">
