@@ -50,7 +50,7 @@ export const PromosEspaña = () => {
         <div className='w-3/4 max-[510px]:w-10/12 flex max-[1000px]:flex-col text-sm shadow-[4px_5px_13px_5px_rgba(0,0,0,0.60)] bg-[#0000007b] border-white justify-center items-center border-[0.005rem] max-[1000px]:h-[15rem] max-[360px]:h-[15rem] h-[7rem] rounded-xl mb-[1.5rem]'>
 
           <div className='flex  justify-center items-center w-1/3 '>
-          <img className='max-h-[6.7rem] max-[510px]:mb-[1rem]  max-[510px]:max-h-[4rem] max-[510px]:min-h-[4rem] max-[510px]:w-full object-contain' src={card.imagen}/>
+          <img className='max-h-[4.5rem] min-h-[4.5rem] min-w-[10rem] max-w-[10rem] max-[510px]:mb-[1rem] max-[510px]:max-h-[4rem] max-[510px]:min-h-[4rem] max-[510px]:w-full object-contain ' src={card.imagen}/>
            </div>
            <div className='flex max-[730px]:flex-col w-full  max-[510px]:gap-x-[0rem] max-[510px]:text-xs max-[510px]:mb-[1rem] max-[730px]:-mt-[0.8rem]'>
           <p className='text-[#FF1F97] w-full flex justify-center items-center text-center '>{card.titulo.toUpperCase()}</p>
