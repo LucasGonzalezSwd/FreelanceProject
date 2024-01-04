@@ -4,6 +4,8 @@ import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 import { Footer } from '../components/Footer';
 import { useEffect } from 'react';
+import Swal from 'sweetalert2';
+
 export const Contacto = () => {
   const [nombre, setNombre] = useState('');
   const [numero, setNumero] = useState('');
@@ -25,6 +27,12 @@ export const Contacto = () => {
         setUserId(data.userId);
       })
       .catch((error) => {
+       
+        Swal.fire({
+          icon: 'error',
+          title: '¡Error al enviar el correo!',
+          text: 'Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.',
+        });
         console.error('Error fetching emailjs configuration:', error);
         // Manejar el error si ocurre
       });
@@ -32,6 +40,14 @@ export const Contacto = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    if (!nombre || !email || !numero || !mensaje) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Campos obligatorios',
+        text: 'Por favor, completa todos los campos.',
+      });
+      return; // Detener el envío si algún campo está vacío
+    }
 
     emailjs.sendForm(serviceId, templateId, form.current, userId)
       .then(() => {
@@ -40,6 +56,11 @@ export const Contacto = () => {
         setEmail('');
         setMensaje('');
         setNumero('')
+        Swal.fire({
+          icon: 'success',
+          title: '¡Correo enviado!',
+          text: 'Tu mensaje ha sido enviado correctamente.',
+        });
       })
       .catch((error) => {
         console.log(error.text);
