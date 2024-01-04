@@ -18,20 +18,12 @@ export const Login = () => {
     });
   };
 
-  const hashPassword = async (password) => {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(password);
-    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashedPassword = hashArray.map((byte) => String.fromCharCode(byte)).join("");
-    return hashedPassword;
-  };
-
+ 
   const handleLogin = async (e) => {
     e.preventDefault();
   
     try {
-      const hashedPassword = await hashPassword(loginData.password);
+     
 
       const response = await axios.post("https://barbershopclub.hair/api/getadmin", {
         nombre: loginData.username,
@@ -45,7 +37,7 @@ export const Login = () => {
   
         // Almacena las credenciales en el localStorage después de un inicio de sesión exitoso
         localStorage.setItem('username', loginData.username);
-        localStorage.setItem('password', hashedPassword);
+        localStorage.setItem('password', loginData.password);
   
         // Redirige al usuario a otra página o realiza alguna acción
       }
